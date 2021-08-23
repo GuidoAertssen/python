@@ -1,0 +1,13 @@
+import requests
+
+url = "https://sandboxdnac2.cisco.com/dna/intent/api/v1/site"
+
+payload={}
+headers = {
+  'X-Auth-Token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI2MDRlNTc0ZDdiM2FhOTA2ZWRmMjA3M2QiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVlNWE0MzI2NzUxNjEyMDBjYzRhYzk2MyJdLCJ0ZW5hbnRJZCI6IjVlNWE0MzI1NzUxNjEyMDBjYzRhYzk1YyIsImV4cCI6MTYyOTQ2NTE2MiwiaWF0IjoxNjI5NDYxNTYyLCJqdGkiOiI0NGMyMWQxYy1mNGYzLTQ2ZGMtODkxMy1kOTE0ZjFmY2JjOTEiLCJ1c2VybmFtZSI6ImRldm5ldHVzZXIifQ.GG_OF0NfWkqD-L5it5ARJ98DTpNnuykRshiQt6-1utcI3cTzBuLc_j4lqdAqGRJgRs_rFulxvDPzw8_hYGPRscWprB-gJF4wpDprEhFm5W-3GZBWfd6ZDInmvJYzVp9ZtSEPjUfSalA534GGWG9KEISKa81O45ihxC8NCnv1Qz1rE4LY73_JEp_ki3L1e2wWUavVZES2B-LzJX2vmOtIYQOfpkDSThOk4V1JJVMO-x-w0RyGgUjie2UXASMwEIXKgYYO8IX78-f3b5eOucwuodLUy4pSfi4mxj3TxB8o2zB0EMZUkqgOsnQvDlUOL7K9zBp5cgrkOfCknvU_YlfkXQ'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+#print(response.text)
+print(response['Token'])
